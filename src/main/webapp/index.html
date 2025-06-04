@@ -1,10 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山本大稀</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
+  <!-- コンテナ開始 -->
+  <div class="container">
+
+    <header>
+      <h1>山本大稀（やまもとだいき）</h1>
+      <p></p>
+    </header>  
+
+    <main>
+		<section class="intro scroll-show">
+		  <h2>プロフィール</h2>
+		  <div class="profile-card">
+		    <div class="profile-text">
+		      <div class="profile-item">
+				
+		        <h3>📍 出身地</h3>
+		        <p>
+					2002年に
+					<span class="clickable open-modal"
+					data-img="img/chita.png"
+					data-desc="愛知県 知多市の場所">
+				    愛知県知多市   
+				</span>
+				    で生まれました。
+				</p>
+		      </div>
+			  
+		      <div class="profile-item">
+				
+		        <h3>🎓 経歴</h3>
+		        <p>
+					名古屋経済大学で金融と株式について学びました。<br>
+					学生時代は
+		        <span class="clickable open-modal"
+				      data-img="img/IMG_1433.jpeg"
+					  data-desc="映画が無料で見れるのでたくさん見ました。">
+					映画館でアルバイト
+				</span>
+					をしていました。
+				</p>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+      
+      <section>
+        <h2>好きなもの・趣味</h2>
+		<div class="hobby-wrapper scroll-show">
+        <div class="hobby-gallery">  
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_1783.jpg"
+               data-alt="音楽"
+               data-desc="洋楽が好きです。一人でいるときは常に音楽を聴いています。去年は約1,300時間音楽を聴いていました。">
+            <img src="img/IMG_1759.jpg" alt="音楽">
+            <p>音楽を聴く</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_1760.jpg"
+               data-alt="映画"
+               data-desc="↑最近見た映画です。Wickedとグラディエーターがおもしろかったです。">
+            <img src="img/IMG_1760.jpg" alt="映画">
+            <p>映画鑑賞</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_9211.jpeg"
+               data-alt="アニメ"
+               data-desc="ハンターハンター、ジョジョ、コナンが好きです。現在は、来世は他人がいいというアニメを見ています。">
+            <img src="img/IMG_1761.JPG" alt="アニメ">
+            <p>アニメ、漫画</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_0232.PNG"
+               data-alt="ゲーム"
+               data-desc="主にスマホゲームをやっています。最近はポケポケを頑張っています。">
+            <img src="img/IMG_0232.PNG" alt="ゲーム">
+            <p>ゲーム</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_0854.jpeg"
+               data-alt="旅行"
+               data-desc="イタリアのコロッセオに行った時の写真です。海外旅行が好きです。">
+            <img src="img/IMG_0854.jpeg" alt="旅行">
+            <p>旅行</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_9549.jpeg"
+               data-alt="スニーカー"
+               data-desc="スニーカーが好きで集めています。ポケモンカードも集めています。">
+            <img src="img/IMG_9549.jpeg" alt="スニーカー">
+            <p>コレクション</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-video="img/502869174675309021.mov"
+               data-alt="ゴルフ動画"
+               data-desc="最近はゴルフをやっています。">
+            <img src="img/20310.jpg" alt="ゴルフ">
+            <p>スポーツ</p>
+          </div>
+		  
+ 		  <div class="hobby-card open-modal"
+		  	   data-img="img/IMG_0374.jpeg"
+			   data-alt="サウナ"
+			   data-desc="サウナに行くことが好きです。">
+		    <img src="img/IMG_0537.jpeg" alt="サウナ">
+		    <p>サウナ</p>
+		  </div>
+
+          <div class="hobby-card open-modal"
+               data-img="img/IMG_0043.jpeg"
+               data-alt="ハンバーガー"
+               data-desc="最近はハンバーガーにハマっています。">
+            <img src="img/IMG_0043.jpeg" alt="ハンバーガー">
+            <p>グルメ</p>
+          </div>
+
+          <div class="hobby-card open-modal"
+               data-video="img/IMG_1780.mov"
+               data-alt="パスタ"
+               data-desc="毎日自炊をするので料理を特訓中です。">
+            <img src="img/IMG_1690.jpeg" alt="パスタ">
+            <p>料理</p>
+          </div>
+		  </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <!-- コンテナ終了 -->
+
+  <!-- モーダル -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img id="modal-img" src="" alt="">
+      <video id="modal-video" controls class="hidden"></video>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

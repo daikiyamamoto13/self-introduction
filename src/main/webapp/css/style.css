@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/* ベース設定 */
+body {
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-image: url('../img/bg-image.png');
+  background-repeat: repeat;
+  background-size: auto;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* 見出し */
+header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 4px solid #3498db;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+header p {
+  text-align: center;
+  color: #888;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-left: 5px solid #3498db;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+/* プロフィール */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-item p {
+  color: #222;
+  text-shadow: 0.5px 0.5px 2px rgba(255, 255, 255, 0.4);
+}
+
+.profile > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clickable {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.clickable:hover {
+  color: #21618c;
+}
+
+
+/* ホビーギャラリー */
+.hobby-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hobby-card {
+  background: rgba(255, 255, 255, 0.85); 
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(4px); 
+}
+
+
+.hobby-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+
+.hobby-card img,
+.hobby-card video {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.hobby-card p {
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  color: #222;
+  text-shadow: 0.5px 0.5px 2px rgba(255, 255, 255, 0.4);
+}
+
+.hobby-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(4px); 
+}
+
+
+/* モーダル */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img,
+.modal-content video {
+  max-width: 100%;
+  max-height: 70vh;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+#modal-video {
+  display: none !important;	
+  max-width: 100%;
+    max-height: 70vh;
+    margin: 0 auto;
+    display: block;
+}
+
+#modal-video:not(.hidden) {
+  display: block !important;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+.scroll-show {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.scroll-show.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile-img {
+    max-width: 100%;
+  }
